@@ -1,4 +1,4 @@
-<%# <%= form_with model: @recipe, url: recipes_url do |f| %>
+<%= form_with model: @recipe, url: recipes_url do |f| %>
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -16,15 +16,15 @@
 
   <div>
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
 
   <div>
     <%= f.label :public %>
-    <%= f.text_field :public %>
+    <%= f.check_box :public %>
   </div>
 
   <div>
     <%= f.submit "Add new recipe" %>
   </div>
-<% end %> %>
+<% end %>
