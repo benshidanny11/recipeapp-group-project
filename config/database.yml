@@ -4,7 +4,7 @@ development:
   database: recipe-group-app
   pool: 5
   host: localhost
-  username: post
+  username: postgres
   password: annor0543
 
 test:
@@ -12,7 +12,7 @@ test:
   encoding: unicode
   database: recipe-group-app-test
   pool: 5
-  username: recipe-app
+  username: postgres
   password: annor0543
 
 staging:
