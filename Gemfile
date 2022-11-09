@@ -84,4 +84,3 @@ end
 gem 'cancancan'
 gem 'devise'
 gem 'jwt'
-
