@@ -4,8 +4,8 @@ development:
   database: recipe-group-app
   pool: 5
   host: localhost
-  username: dannybenshi
-  password: DannyPro123
+  username: postgres
+  password: annor0543
 
 test:
   adapter: postgresql
