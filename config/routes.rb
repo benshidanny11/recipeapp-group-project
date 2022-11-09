@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
+  get 'recipes/index'
   devise_for :users
-
-  root to: 'foods#index'
-  resources :users, except: :show
-  resources :foods, except: :show
-  resources :recipes, except: :show
-
+  resources :recipes, only: [:index, :new, :create, :destroy]
+  root 'users#index'
+  resources :foods
 end

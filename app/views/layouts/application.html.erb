@@ -11,13 +11,10 @@
   </head>
 
   <body>
-    <%= render 'layouts/shared/log_menu' %>
-    <div>
-    <% flash.each do |name, message| %>
-    <div class="<%= name %>"><%= message %></div>
-    <% end %>
-    </div>
-
+  <header>
+    <%= render 'layouts/navbar' %>
+    <%= render 'layouts/alerts' %>
+  </header>
     <%= yield %>
   </body>
 </html>
