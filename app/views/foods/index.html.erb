@@ -1,2 +1,31 @@
-<%# <h1>Foods#index</h1>
-<p>Foods index</p> %>
+<div class="row">
+  <div class="col-1"> 
+  </div>
+  <div class="col-10">
+  <h1 class="text-center">Manage food</h1>
+  <div>
+   <div class="d-flex justify-content-end m-3">
+    <button class="btn btn-outline-info">
+      <%= link_to 'Add food', new_food_path, class: 'nav-link' %>
+    </button>
+  </div>
+  
+  </div>
+    <table class="table">
+    <tr>
+    <th>Food</th>
+    <th>Measurement unit</th>
+    <th>Unit price</th>
+    <th>Actions</th>
+    </tr>
+    <tbody>
+    <% @foods.each do |food| %>
+    <tr><td> <%= food.name %></td><td> <%= food.measurement_unit %></td><td> <%= food.unit_price %></td><td> <%= link_to 'Show food', food_path(food), class: 'btn btn-success' %>
+    <%= button_to 'Delete',food_path(food), class: 'btn btn-danger mt-2', method: :delete, data: { confirm: 'Are you sure?' } %></td></tr>
+    <%end%>
+    </tbody>
+    </table>
+  </div>
+   <div class="col-1"> 
+  </div>
+</div>
