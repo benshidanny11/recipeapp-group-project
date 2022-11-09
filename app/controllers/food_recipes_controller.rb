@@ -19,7 +19,7 @@ class FoodRecipesController < ApplicationController
       food_recipe = FoodRecipe.new(params.require(:recipe_food).permit(:food_id, :quantity))
       food_recipe.recipe = @recipe
       if food_recipe.save
-        redirect_to recipe_path(params[:recipe_id]), flash: { alert: 'Your food is saved' }
+        redirect_to recipe_path(params[:recipe_id]), flash: { notice: 'Your food is saved' }
       else
         redirect_to new_recipe_food_recipe_path, flash: { alert: 'Could not save your food' }
       end
@@ -50,4 +50,3 @@ class FoodRecipesController < ApplicationController
       params.require(:food_recipe).permit(:quantity, :food_id)
     end
   end
-  
