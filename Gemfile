@@ -5,6 +5,10 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 ruby '3.1.2'
 
+gem 'bootstrap', '~> 5.1', '>= 5.1.3'
+
+gem 'bootstrap_form', '~> 5.1'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 
