@@ -4,16 +4,16 @@ development:
   database: recipe-group-app
   pool: 5
   host: localhost
-  username: postgres
-  password: annor0543
+  username: dannybenshi
+  password: DannyPro123
 
 test:
   adapter: postgresql
   encoding: unicode
   database: recipe-group-app-test
   pool: 5
-  username: postgres
-  password: annor0543
+  username: dannybenshi
+  password: DannyPro123
 
 staging:
   url: <%= ENV['DATABASE_URL'] %>
