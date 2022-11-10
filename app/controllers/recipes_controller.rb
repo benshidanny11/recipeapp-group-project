@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   load_and_authorize_resource
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.includes(:user)
   end
 
   def show
