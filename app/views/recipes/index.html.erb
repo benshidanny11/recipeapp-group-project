@@ -7,16 +7,16 @@
   </div>
 
   <% @recipes.each do |recipe| %>
-    <div class="row m-3 border">
+    <div class="row m-3 border justify-content-around">
       <div class="col-3 m-2 p-3">
         <%= link_to recipe_path(recipe.id) do %>
           <h3><%= recipe.name %></h3>
         <% end %>
-        <% if can? :destroy, recipe %>
+        <% if can? :destroy, recipe, class: 'mt-4' %>
           <%= button_to "Remove", recipe_path(recipe.id), method: :delete , class: "btn btn-danger" %>
         <% end %>
       </div>
-      <div class="col-offset-1 col-8 m-2">
+      <div class="col-8 m-2 mr-5">
         <p><%= recipe.description %></p>
       </div>
     </div>
