@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe Recipe, type: :model do
   describe 'Recipe model' do
     user = User.create(name: 'Steve', email: 'steve@example.com', password: '123456')
-    subject{
+    subject do
       Recipe.new(user_id: user, name: 'Grilled Chicked', preparation_time: '25 minutes', cooking_time: '50 minutes',
                  description: 'Well grilled chicken')
-    }
+    end
     before { subject.save }
 
     it 'check the name is not blank' do
