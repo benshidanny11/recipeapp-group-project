@@ -50,7 +50,7 @@
         <td> 
         <% if can? :destroy, @recipe %>
         <div class="d-flex gap-4">
-          <%= link_to "Modify", edit_recipe_food_recipe_path(@recipe.id, food_recipe.id), class: "" %> 
+          <%= link_to "Modify", edit_recipe_food_recipe_path(@recipe.id, food_recipe.id), class: 'secondary'%> 
           <%= button_to "Remove", recipe_food_recipe_path(@recipe.id, food_recipe.id), :method => :delete, class: "btn btn-outline-danger" %>
         </div>
         <% end %>
