@@ -9,13 +9,13 @@ RSpec.describe 'recipes#index', type: :feature do
       fill_in 'Password', with: '123456'
       click_button 'Log in'
 
-      @recipe1 = Recipe.new(user: @user, name: 'Fried Chicken', preparation_time: '40 minutes', cooking_time: '50 minutes',
+      @recipe1 = Recipe.new(user: @user, name: 'Fried Chicken', preparation_time: '40 mins', cooking_time: '25 mins',
                             description: 'Delicious fried chicken')
-      @recipe2 = Recipe.new(user: @user, name: 'Grilled Chicked', preparation_time: '2 hrs 10 minutes', cooking_time: '50 minutes',
+      @recipe2 = Recipe.new(user: @user, name: 'Grilled Chicked', preparation_time: '10 mins', cooking_time: '35 mins',
                             description: 'delicious grilled chicken')
-      @recipe3 = Recipe.new(user: @user, name: 'Beef Pizza', preparation_time: '2hrs 10 minutes', cooking_time: '50 minutes',
+      @recipe3 = Recipe.new(user: @user, name: 'Beef Pizza', preparation_time: '15 mins', cooking_time: '20 mins',
                             description: 'Delicious Beef Pizza')
-      @recipe4 = Recipe.new(user: @user, name: 'Yam Chips', preparation_time: '45 minutes', cooking_time: '50 minutes',
+      @recipe4 = Recipe.new(user: @user, name: 'Yam Chips', preparation_time: '10 mins', cooking_time: '35 mins',
                             description: 'Delicious Yam chips')
 
       visit(recipes_path)

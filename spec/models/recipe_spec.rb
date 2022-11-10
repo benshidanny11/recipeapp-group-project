@@ -3,7 +3,10 @@ require 'rails_helper'
 RSpec.describe Recipe, type: :model do
   describe 'Recipe model' do
     user = User.create(name: 'Steve', email: 'steve@example.com', password: '123456')
-    subject { Recipe.new(user_id: user, name: 'Grilled Chicked', preparation_time: '25 minutes', cooking_time: '50 minutes', description: 'Well grilled chicken') }
+    subject {
+      Recipe.new(user_id: user, name: 'Grilled Chicked', preparation_time: '25 minutes', cooking_time: '50 minutes',
+                 description: 'Well grilled chicken')
+    }
     before { subject.save }
 
     it 'check the name is not blank' do
@@ -12,18 +15,18 @@ RSpec.describe Recipe, type: :model do
     end
 
     it 'check if the name is not exceeding 50 characters' do
-        subject.name = 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world
+      subject.name = 'Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world
         Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world'
-        expect(subject).to_not be_valid
+      expect(subject).to_not be_valid
     end
 
     it 'check the prepration_time is not blank' do
-        subject.preparation_time = nil
-        expect(subject).to_not be_valid
-      end
+      subject.preparation_time = nil
+      expect(subject).to_not be_valid
+    end
 
     it 'check if the preparation time is not exceeding 100 characters' do
-      subject.preparation_time = 'Hello world Hello world Hello world Hello world Hello world 
+      subject.preparation_time = 'Hello world Hello world Hello world Hello world Hello world
       Hello world Hello world Hello world Hello world Hello world
       Hello world Hello world Hello world Hello world Hello world'
       expect(subject).to_not be_valid
@@ -35,8 +38,8 @@ RSpec.describe Recipe, type: :model do
     end
 
     it 'check if the cooking_time is not exceeding 100 characters' do
-      subject.cooking_time = 'Lorem ipsum dolor sit amet, consectetur 
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+      subject.cooking_time = 'Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.'
       expect(subject).to_not be_valid
     end

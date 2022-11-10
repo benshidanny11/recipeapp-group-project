@@ -12,13 +12,13 @@ RSpec.describe 'Recipes#show', type: :feature do
       fill_in 'Password', with: '123456'
       click_button 'Log in'
 
-      @recipe1 = Recipe.new(user: @user, name: 'Grilled Chicken', preparation_time: '12 minutes', cooking_time: '35 minutes',
+      @recipe1 = Recipe.new(user: @user, name: 'Grilled Chicken', preparation_time: '12 mins', cooking_time: '35 mins',
                             description: 'Delicious grilled chicked')
-      @recipe2 = Recipe.new(user: @user, name: 'Beef Pizza', preparation_time: '40 minutes', cooking_time: '55 minutes',
+      @recipe2 = Recipe.new(user: @user, name: 'Beef Pizza', preparation_time: '40 mins', cooking_time: '55 mins',
                             description: 'Delicious Beef Pizza')
-      @recipe3 = Recipe.new(user: @user, name: 'Fried Chicked', preparation_time: '32 minutes', cooking_time: '25 minutes',
-                            description: 'Deliocus Fried Chicken')
-      @recipe4 = Recipe.new(user: @user, name: 'Jollof Rice', preparation_time: '10 minutes', cooking_time: '60 minutes',
+      @recipe3 = Recipe.new(user: @user, name: 'Fried Chicked', preparation_time: '32 mins', cooking_time: '25 mins',
+                            description: 'Delicious Fried Chicken')
+      @recipe4 = Recipe.new(user: @user, name: 'Jollof Rice', preparation_time: '10 mins', cooking_time: '60 mins',
                             description: 'Delicious Jollof Rice')
       @recipe1.save!
 

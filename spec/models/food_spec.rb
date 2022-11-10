@@ -22,7 +22,7 @@ RSpec.describe Food, type: :model do
     end
 
     it 'check if the measurement unit is not exceeding 10 characters' do
-      subject.measurement_unit = 'Lorem ipsum dolor sit amet, consectetur 
+      subject.measurement_unit = 'Lorem ipsum dolor sit amet, consectetur
       adipiscing elit, sed'
       expect(subject).to_not be_valid
     end
