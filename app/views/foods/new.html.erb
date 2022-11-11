@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="container-fluid">
+   <h1>New food</h1>
+  <%= form_with model: @food do |f| %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name, class: 'form-control' %><br />
+  <%= f.label :measurement_unit %><br />
+  <%= f.text_field :measurement_unit, class: 'form-control' %><br />
+  <%= f.label :unit_price %><br />
+  <%= f.number_field :unit_price, class: 'form-control' %><br />
+ <%= f.submit "Add food", class: 'mt-2 btn btn-info' %>
+<% end %>
+<hr>
+<%= link_to 'Back', foods_path,  class: 'mt-4 btn btn-info' %>
+  </div>
+</div>
+<%# <div class="row">
+</div> %>

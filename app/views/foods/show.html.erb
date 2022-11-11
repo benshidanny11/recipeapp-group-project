@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="container-fluid">
+<h1>Food details</h1>
+<p>Food name: <%= @food.name %></p>
+<p>Food price: <%= @food.unit_price %></p>
+<p>Measurement unity: <%= @food.measurement_unit %></p>
+
+<hr>
+<%= link_to 'Back', foods_path, class: 'btn btn-info' %>
+</div>
+<div>
